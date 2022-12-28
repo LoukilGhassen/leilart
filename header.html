@@ -1,0 +1,39 @@
+<div class="header">
+    <div>
+        <a href="index.php"><img class="logo" src="images/logo.png"></a>
+    </div>
+    <div>
+        <ul class="menu">
+            <a href="index.php" id="acceuil"><li>Home</li></a>
+            <a href="category.php#categorieWord" id="categorie"><li>Categories</li></a>
+            <a href="findarticle.php" id="chercher"><li>Find a product</li></a>
+            <a href="contact.php" id="contact"><li>Contact</li></a>
+        </ul>
+    </div>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</div>
+<script>
+    //Header Responsive
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.menu');
+    const navLinks = document.querySelectorAll('.menu li');
+    burger.addEventListener('click',()=>{
+        //toggle burger
+        nav.classList.toggle('nav-active');
+        //animate Links
+        navLinks.forEach((link , index)=> {
+            if(link.style.animation){
+                link.style.animation = '';
+            }else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`
+            }
+        });
+        //burger animation 
+        burger.classList.toggle('toggle');
+    });
+
+</script>

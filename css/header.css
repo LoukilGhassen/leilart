@@ -1,0 +1,112 @@
+a{
+    text-decoration: none;
+}
+.header {
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   width: 100%;
+    z-index: 1000;
+
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    color: #e3e3e3;
+    margin-right: 50px; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    color: #fad900;
+    transition: all 0.3s ease-in;
+}
+.burger div{
+    width:25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+.burger{
+    display: none;
+}
+@media only screen and (max-width: 760px) {
+    .menu li{
+       margin-right: 25px; 
+    }
+}
+@media only screen and (max-width: 650px) {
+    .header{
+        flex-direction: row-reverse;
+    }
+    .menu{
+        position: absolute;
+        left: 0%;
+        height: calc(100vh - 84px);
+        min-width: 50vw;
+        top: 84px;
+        background-color:black ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        z-index: 1000;
+        padding: 0px 15px;
+
+    }
+    
+    .menu li {
+        opacity:0;
+        margin: 0;
+
+
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
+@keyframes navLinkFade{
+
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} 
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}  
+.toggle .line2{
+    opacity: 0;
+}    
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}    
+
+
+

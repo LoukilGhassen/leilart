@@ -1,0 +1,50 @@
+.footer {
+    background: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 0px;
+    padding: 12px;
+}
+
+.footer > p {
+    font-weight: bolder;
+    font-size: x-large;
+    color: #e0e0e0;
+}
+
+.follow-us {
+    color: #dddde2;
+    margin-bottom: 10px;
+   opacity: 0.75;
+}
+
+.icon-container {
+    display: flex;
+    margin-bottom: 12px;
+
+}
+
+.footer-icon {
+    font-size: 15px;
+    color: #dddde2;
+    opacity: 0.75;
+    border: 1px solid #dddde2;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 8px;
+}
+
+.footer-icon a{
+   text-decoration: none;
+   color: #dddde2;
+   opacity: 0.75;
+}
+.company-name {
+   color: #dddde2;
+   opacity: 0.75;
+}
+

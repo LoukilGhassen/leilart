@@ -1,0 +1,90 @@
+
+.slide {
+    width: 100%;
+    height: calc(100vh - 84px);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 84px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide-1 {
+    background-image: url('../images/carrou.jpg');
+
+}
+
+.slide-content {
+
+    color: rgb(206, 206, 206);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide-content h1 {
+    font-size: 90px;
+    text-transform: none;
+    font-family:  cursive;
+    letter-spacing: 12px;
+    font-weight: 800;
+}
+
+.slide-content p {
+    font-size: 25px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 555px) {
+    .slide-content h1 {
+        font-size: 60px;
+    }
+
+    .slide-content p {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 461px) {
+    .slide-content h1 {
+        font-size: 50px;
+    }
+
+    .slide-content p {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .slide-content h1 {
+        font-size: 40px;
+    }
+
+    .slide-content p {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 200px) {
+    .slide-content h1 {
+        font-size: 29px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+}
+
