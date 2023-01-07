@@ -1,0 +1,5 @@
+tasks:
+  - name: add prmession
+    before: sudo chmod -R a+WRX
+  - name: lance docke
+    before: docker-compose up
