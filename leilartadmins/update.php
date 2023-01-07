@@ -1,4 +1,8 @@
 <?php
+@ob_start();
+@session_start();
+?>
+<?php
 include('security.php');
 if(isset($_SESSION['role']) && $_SESSION['role'] !== "admin")
 {

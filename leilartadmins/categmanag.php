@@ -1,4 +1,8 @@
 <?php
+@ob_start();
+@session_start();
+?>
+<?php
 include('security.php');
 include('includes/header.php');
 include('includes/navbar.php');
@@ -6,7 +10,7 @@ include('includes/navbar.php');
 ?>
 <!-- Delete data -->
 <?php
-include("../dbconfig.php");
+include("../dbconfig.php");  
 if(isset($_POST['delete_categ_btn']))
 {
     $delid = $_POST['delete_categ_id'] ;

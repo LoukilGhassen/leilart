@@ -1,10 +1,12 @@
 <?php
+@ob_start();
+@session_start();
+?>
+<?php
 include('includes/header.php');
 include('../dbconfig.php');
-session_start();
-
 ?>
-    <!--Checking for login -->
+
 <?php
 if (isset($_POST['login_btn'])) {
     $useremail = htmlspecialchars($_POST['email_login']);
@@ -23,7 +25,6 @@ if (isset($_POST['login_btn'])) {
             $_SESSION['username'] = $row['username_admin'];
             $_SESSION['profileimg'] = $row['img_admin'];
             $_SESSION['role'] = $row['role_admin'];
-
             $req->closeCursor();
             $bdd = null;
              header('Location:index.php');
@@ -34,8 +35,6 @@ if (isset($_POST['login_btn'])) {
 
 }
 ?>
-
-
     <div class="container">
 
         <!-- Outer Row -->
