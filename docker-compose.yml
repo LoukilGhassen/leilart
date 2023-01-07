@@ -15,6 +15,8 @@ services:
         container_name: db
         image: mysql
         restart: always
+        volumes:
+        - .docker/data/db:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: leilart
